@@ -1,0 +1,20 @@
+.pagination {
+    list-style: none;
+    --bs-pagination-color: #ffffff !important;
+    --bs-pagination-bg: var(--bs-gray-dark) !important;
+    margin-left: 3%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.pagination .page-link:focus {
+    box-shadow: none !important;
+    border-color: transparent !important;
+}
+
+.pagination > li > span:hover
+{
+    background-color: var(--bs-gray-dark) !important;
+    border-color: var(--bs-gray-dark) !important;
+    color: #ffffff !important;
+}

@@ -1,0 +1,105 @@
+ru:
+  activerecord:
+    attributes:
+      blog:
+        title: "Название"
+        body: "Текст"
+        image: "Изображение"
+        file: "Файл"
+      work:
+        title: "Название"
+        body: "Текст"
+        image: "Изображение"
+        file: "Файл"
+
+  set_page_options:
+    page_title: 'Мастерская Миронежье'
+    page_description: 'Установка Ремонт Калибровка Заправка'
+    page_keywords: 'Автономные отопители Тахографы Кондиционеры'
+
+  global:
+    button:
+      delete: "Удалить"
+      edit: "Изменить"
+      show: "Показать"
+      submit: "Отправить"
+    dialog:
+      you_sure: "Вы уверены?"
+  main:
+    index:
+      blogs:
+        title: "Статьи"
+
+  works:
+    index:
+      title: "Услуги"
+    show:
+      title: "Услуга"
+    edit:
+      title: "Редактирование"
+    new:
+      title: "Новая услуга"
+    create:
+      success: "Услуга добавлена!"
+    destroy:
+      success: "Услуга удалена!"
+
+  blogs:
+    index:
+      title: "Статьи"
+    show:
+      title: "Статья"
+    edit:
+      title: "Редактирование"
+    new:
+      title: "Новая статья"
+    create:
+      success: "Статья добавлена!"
+    destroy:
+      success: "Статья удалена!"
+
+  contacts:
+    index:
+      title: "Контакты"
+
+  menu:
+    home: "Главная"
+    works: "Услуги"
+    blogs: "Статьи"
+    contacts: "Контакты"
+    auth:
+      sign_in:
+        edit: "Изменить"
+        exit: "Выйти"
+
+  en: "EN"
+  ru: "RU"
+
+  errors:
+    messages:
+      content_type_invalid: "должны быть в формате PDF, DOC, DOCX, XLS, XLSX, JPG"
+      file_size_out_of_range: "не должны превышать 100Mb"
+      limit_out_of_range: "не могут быть загружены в количестве больше шести"
+      carrierwave_processing_error: "Не удается изменить размер изображения."
+      carrierwave_integrity_error: "не правильный файл."
+      carrierwave_download_error: "не удалось загрузить."
+      extension_whitelist_error: "должен быть в формате PDF, DOC, DOCX, XLS, XLSX, JPG."
+      extension_blacklist_error: "нельзя загрузить."
+      max_size_error: "не должен превышать 20 мегабайт."
+
+  views:
+    pagination:
+      first: "&laquo; Первая"
+      last: "Последняя &raquo;"
+      previous: "&laquo;"
+      next: "&raquo;"
+      truncate: "&hellip;"
+    helpers:
+      page_entries_info:
+        one_page:
+          display_entries:
+            zero: "Не %{entry_name} найдено"
+            one: "Показать <b>1</b> %{entry_name}"
+            other: "Показать <b>all %{count}</b> %{entry_name}"
+        more_pages:
+          display_entries: "Показать %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b>  <b>%{total}</b> все"

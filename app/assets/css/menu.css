@@ -1,0 +1,35 @@
+.nav {
+    font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+.menu-start {
+    margin-top: 3px;
+    width: 80px;
+    margin-left: -15px;
+}
+.image-menu {
+    margin-top: -1px;
+}
+.menu-lang .dropdown-item {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+header label:hover {
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+}
+
+#dws-menu,
+header label {
+    display: none;
+}
+
+.menu-home {
+    display: none;
+}
+
+.user-menu {
+    display: none;
+}

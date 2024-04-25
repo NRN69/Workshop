@@ -1,0 +1,35 @@
+@import url('snip.css');
+@import url('modal.css');
+@import url('carousel.css');
+@import url('dropdown.css');
+@import url('menu.css');
+@import url('global.css');
+@import url('pagination.css');
+@import url('contacts.css');
+@import url('footer.css');
+@import url('form.css');
+@import url('animate.css');
+@import url('auth.css');
+
+.img_tag-style {
+    border-radius: 50px;
+}
+
+.img-fluid .image-blog-show {
+    margin-left: -270px;
+    margin-top: 40px;
+}
+
+.img-fluid .image-work-show {
+    margin-left: -270px;
+    margin-top: 0;
+}
+.work-body-text{
+
+    margin-top: -7%;
+    margin-left: 18%;
+
+}
+
+
+

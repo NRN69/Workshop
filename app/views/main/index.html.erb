@@ -1,0 +1,137 @@
+<% currently_at t('menu.home') %>
+
+<main class="my-5">
+  <section>
+    <div class="container">
+      <div class="text-center">
+        <div class="p-4"></div>
+        <div class="row row-work">
+
+          <% @works.each do |work|  %>
+
+            <div class="col-xl-4 col-md-6 mb-4">
+              <div class="card card-work">
+                <figure class="snip">
+
+                  <%= image_tag(work.img.url,
+                                   size: '400x300',
+                                    alt: 'no_image',
+                                  class: 'work-index-image') %>
+
+                  <figcaption>
+                    <h2><span>
+
+                  <%= work.title.capitalize %>
+
+                   </span></h2>
+                    <p>
+
+                  <% work.body.split(',').each do |line| %>
+
+                    <p>
+
+                    <%= line.upcase %>
+
+                    </p>
+                  <% end %>
+
+                    <%= link_to '', work_path(work),
+                                    class: 'text-decoration-none text-reset' %>
+                    <p><b>
+
+                      <% if current_user.try(:admin) %>
+
+                        <%= link_to t('global.button.edit').upcase, edit_work_path(work),
+                                    class: 'text-start my-2' %>
+
+                        <%= link_to t('global.button.delete').upcase, work_path(work),
+                                    data: { turbo_method: :delete,
+                                           turbo_confirm: t('global.dialog.you_sure')},
+                                    class: 'text-center my-2' %>
+                      <% end %>
+
+                    </b>
+                    <h2 class="text-end">
+
+                      <%= link_to "🡪", work_path(work),
+                                    class: 'text-decoration-none text-reset' %>
+
+                    </h2>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      <div class="p-4"></div>
+  <section class="my-4">
+    <div class="container">
+      <div class="text-center">
+        <h1 class="mb-5">
+            <div class="main-title">
+          <strong><%= t('menu.blogs') %></strong>
+            </div>
+        </h1>
+        <div class="row row-blog">
+
+          <% @blogs.each do |blog|  %>
+
+            <div class="col-xl-4 col-md-6 mb-4">
+              <div class="card card-blog">
+                <figure class="snip">
+
+                  <%= image_tag(blog.img.url,
+                                size: '400x300',
+                                alt: 'no_image', class: 'blog-index-image') %>
+                  <figcaption>
+                    <h2><span>
+
+            <%= sanitize blog.title.capitalize%>
+
+          </span></h2>
+                    <p>
+                      <%= simple_format blog.body.truncate(90, separator: ' ') %>
+                    </p><br>
+
+                    <%= link_to '', blog_path(blog),
+                                class: 'text-decoration-none text-reset' %>
+                    <p><b>
+
+                      <% if current_user.try(:admin) %>
+                        <%= link_to t('global.button.edit').upcase, edit_blog_path(blog),
+                                    class: 'text-start my-2' %>
+                        <%= link_to t('global.button.delete').upcase, blog_path(blog),
+                                    data: {  turbo_method: :delete,
+                                             turbo_confirm: t('global.dialog.you_sure')},
+                                    class: 'text-center my-2' %>
+                      <% end %>
+
+                    </b>
+                    <h2 class="text-end">
+
+                      <%= link_to "🡪", blog_path(blog),
+                                  class: 'text-decoration-none text-reset' %>
+
+                    </h2>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          <% end %>
+      </div>
+
+        <div class="p-1">
+
+          <%= paginate @blogs %>
+
+        </div>
+        <div class="p-2"></div>
+
+      </div>
+    </div>
+  </section>
+</main>

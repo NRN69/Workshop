@@ -1,0 +1,76 @@
+<% provide :page_title, t('devise.registrations.edit.title') %>
+<% currently_at t('devise.registrations.edit.title') %>
+<main class="my-5">
+  <div class="container">
+    <div class="text-center">
+      <h1 class="mb-5">
+
+        <strong><%= " #{t('devise.registrations.edit.title')} #{current_user.email}" %></strong>
+
+      </h1>
+      <div class="row">
+        <div class="col-lg-12 col-md-6 mb-4">
+
+          <%= form_for(resource,
+                       as: resource_name,
+                       url: registration_path(resource_name),
+                       html: { method: :put }) do |f| %>
+
+            <%= render "devise/shared/error_messages", resource: resource %>
+
+            <div class="field my-1">
+              <%= f.label :email %><br />
+            </div>
+            <div class="field my-0">
+              <%= f.email_field :email,
+                                autofocus: true,
+                                autocomplete: "off",
+                                palceholder: 'Email' %>
+            </div>
+
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+            <% end %>
+
+            <div class="field my-1">
+              <%= f.label :password %><br />
+            </div>
+              <div class="field my-2">
+              <%= f.password_field :password,
+                                   autocomplete: "off",
+                                   palceholder: t('devise.autocomplete.password') %>
+
+              <% if @minimum_password_length %><br />
+                <em><%= "#{@minimum_password_length} #{t('devise.registrations.edit.minimum')}" %></em>
+              <% end %>
+            </div>
+
+            <div class="field my-1">
+              <%= f.label :password_confirmation %><br />
+            </div>
+            <div class="field my-2">
+              <%= f.password_field :password_confirmation,
+                                   autocomplete: "off",
+                                   palceholder: t('devise.autocomplete.password_confirm') %>
+            </div>
+
+
+            <div class="field my-1">
+              <%= f.label :current_password %><br />
+            </div>
+            <div class="field my-2">
+              <%= f.password_field :current_password,
+                                   autocomplete: 'off',
+                                   placeholder: t('devise.autocomplete.current-password') %>
+            </div>
+
+            <div class="actions my-3">
+              <%= f.submit t('global.button.submit'), class: 'btn btn-dark' %>
+            </div>
+          <% end %>
+          <%= link_to t('devise.registrations.edit.button'), :back %>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

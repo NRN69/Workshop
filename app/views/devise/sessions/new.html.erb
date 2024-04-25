@@ -1,0 +1,44 @@
+<% provide :page_title, t('devise.sessions.new.title') %>
+<% currently_at t('devise.sessions.new.title') %>
+<main class="my-5">
+  <div class="container">
+    <div class="text-center">
+      <h1 class="mb-5">
+        <strong><%= t('devise.sessions.new.title') %></strong>
+      </h1>
+      <div class="row">
+        <div class="col-lg-12 col-md-6 mb-4">
+
+          <%= form_for(resource,
+                       as: resource_name,
+                       url: session_path(resource_name)) do |f| %>
+            <div class="devise-label">
+              <%= f.label :email %>
+            </div>
+            <div class="field">
+              <%= f.email_field :email,
+                                autofocus: true,
+                                autocomplete: 'off',
+                                placeholder: 'Email' %>
+            </div>
+
+            <div class="devise-label">
+              <%= f.label :password %>
+            </div>
+            <div class="field mb-2">
+              <%= f.password_field :password,
+                                   autocomplete: 'off',
+                                   placeholder: t('devise.autocomplete.password') %>
+            </div>
+
+            <div class="actions my-3">
+              <%= f.submit t('devise.sessions.new.button'),
+                           class: 'btn btn-dark' %>
+            </div>
+          <% end %>
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

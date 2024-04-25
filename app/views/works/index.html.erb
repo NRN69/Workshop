@@ -1,0 +1,26 @@
+<% provide :page_title, t('works.index.title') %>
+<% currently_at t('menu.works') %>
+
+<main class="my-5">
+  <div class="container">
+    <div class="text-center">
+      <div class="mb-5 p-3">
+
+        <% if current_user.try(:admin) %>
+
+          <%= link_to image_tag("file-plus.svg", size: '44'),
+                                 new_work_path, class: 'text-decoration-none text-reset' %>
+        <% end %>
+
+      </div>
+      <div class="row row-work">
+
+        <%= render 'work' %>
+
+      </div>
+      <div class="p-3"></div>
+    </div>
+  </div>
+</main>
+
+

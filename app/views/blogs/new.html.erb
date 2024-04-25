@@ -1,0 +1,25 @@
+<% provide :page_title, t('blogs.new.title') %>
+<% currently_at %>
+
+<main class="my-5">
+  <div class="container">
+    <div class="text-center">
+      <h1 class="mb-5 p-3">
+
+        <strong><%= t('blogs.new.title') %></strong>
+
+      </h1>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+
+           <%= render 'form', blog: @blog %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

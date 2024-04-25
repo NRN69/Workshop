@@ -1,0 +1,54 @@
+<% provide :page_title, t('blogs.edit.title') %>
+<% currently_at %>
+
+<main class="my-5">
+  <div class="container">
+    <div class="text-center">
+      <h1 class="mb-5">
+        <div class="post-title">
+
+          <strong><%= @blog.title %></strong>
+
+        </div>
+      </h1>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <div class="img-fluid">
+
+                <%= image_tag(@blog.img.url,
+                                             size: '600x450',
+                                            class: 'image-post-show') %>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-6 mb-4">
+          <div class="card">
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+            </div>
+            <div class="card-body text-start">
+              <h4 class="card-title">
+                <div class="post-body-text">
+
+                <%= simple_format @blog.body  %>
+
+                </div>
+              </h4>
+
+              <%= render 'shared/uploaded_file', object: @blog %>
+
+              <div class="card">
+
+               <%= render 'form', blog: @blog %>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,104 @@
+en:
+  activerecord:
+    attributes:
+      blog:
+        title: "Title"
+        body: "Text"
+        image: "Image"
+        file: "File"
+      work:
+        title: "Title"
+        body: "Text"
+        image: "Image"
+        file: "File"
+
+  set_page_options:
+    page_title: "Workshop"
+    page_description: 'Workshop Trucks Electronics'
+    page_keywords: 'Heater Tachograph Condition'
+
+  global:
+    button:
+      delete: "Delete"
+      edit: "Edit"
+      show: "Read"
+      submit: "Submit"
+    dialog:
+      you_sure: "Are you sure?"
+  main:
+    index:
+      blogs:
+        title: "Blogs"
+  works:
+    index:
+      title: "Works"
+    show:
+      title: "Work"
+    edit:
+      title: "Edit Work"
+    new:
+      title: "New Work"
+    create:
+      success: "Work created!"
+    destroy:
+      success: "Work deleted!"
+
+  blogs:
+    index:
+      title: "Blogs"
+    show:
+      title: "Blog"
+    edit:
+      title: "Edit Blog"
+    new:
+      title: "New Blog"
+    create:
+      success: "Blog created!"
+    destroy:
+      success: "Blog deleted!"
+
+  contacts:
+    index:
+      title: "Contacts"
+
+  menu:
+    home: "Home"
+    works: "Works"
+    blogs: "Blogs"
+    contacts: "Contacts"
+    auth:
+      sign_in:
+        edit: "Edit"
+        exit: "Exit"
+
+  en: "EN"
+  ru: "RU"
+
+  errors:
+    messages:
+      content_type_invalid: "is not a PDF, DOC, DOCX, XLS, XLSX, JPG"
+      file_size_out_of_range: "must not exceed 100 megabytes"
+      limit_out_of_range: "cannot be uploaded more than six"
+      carrierwave_processing_error: "Cannot resize image."
+      carrierwave_integrity_error: "wrong file."
+      carrierwave_download_error: "failed to load."
+      extension_whitelist_error: "is not a PDF, DOC, DOCX, XLS, XLSX, JPG"
+      extension_blacklist_error: "cannot be loaded."
+      max_size_error: "must not exceed 20 megabytes."
+
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&laquo;"
+      next: "&raquo;"
+      truncate: "&hellip;"
+    helpers:
+      page_entries_info:
+        one_page:
+          display_entries:
+            zero: "No %{entry_name} found"
+            one: "Displaying <b>1</b> %{entry_name}"
+            other: "Displaying <b>all %{count}</b> %{entry_name}"
+        more_pages:
+          display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"

@@ -1,0 +1,24 @@
+.contacts {
+    padding: 60px 60px;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-left: 20%;
+    background-color:transparent !important;
+}
+.yandex {
+    margin-bottom: 5%;
+    padding: 20px;
+}
+
+.contacts h1 {
+
+    font-size: 45px;
+    font-weight: 600;
+    font-family: 'Helvetica Neue', Arial, sans-serif !important;
+    margin-bottom: 15px;
+}
+
+.row-contacts {
+    justify-content: center;
+
+}
